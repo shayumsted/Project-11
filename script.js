@@ -1,4 +1,5 @@
 // U78784426
+document.addEventListener('DOMContentLoaded', function() {
 // Data
 const data = [100, 420, 230, 850, 560, 925];
 
@@ -14,7 +15,7 @@ const xScale = d3.scaleLinear()
 .range([50, width]);
 
 // Creating SVG Container
-const barGroup = svg.selectAll("g")
+const svg = svg.selectAll("g")
         .data(data)
         .enter()
         .append("g")
@@ -42,4 +43,5 @@ bar.on("mouseover", function() {
     d3.select(this).select("rect").attr("class", "bar hover");
 }).on("mouseout", function() {
     d3.select(this).select("rect").attr("class", "bar");
+});
 });
