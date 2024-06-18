@@ -14,3 +14,18 @@ const xScale = d3.scaleLinear()
 .range([50, width]);
 
 // Creating SVG Container
+const barGroup = svg.selectAll("g")
+        .data(data)
+        .enter()
+        .append("g")
+        .attr("transform", (d, i) => `translate(0, ${i * (barHeight + margin)})`);
+
+        barGroup.append("rect")
+        .attr("class", "bar")
+        .attr("width", 0)  // Start width for transition
+        .attr("height", barHeight)
+        .transition()
+        .duration(1000)
+        .attr("width", d => xScale(d));
+
+        
