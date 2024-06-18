@@ -28,4 +28,11 @@ const barGroup = svg.selectAll("g")
         .duration(1000)
         .attr("width", d => xScale(d));
 
-        
+// Appending text labels
+bar.append("text")
+.attr("class", "label")
+.attr("x", d => xScale(d) + 5)  // Position near the end of the bar
+.attr("y", barHeight / 2)
+.attr("dy", "0.35em")
+.attr("text-anchor", "end")
+.text(d => d); 
