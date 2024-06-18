@@ -36,3 +36,10 @@ bar.append("text")
 .attr("dy", "0.35em")
 .attr("text-anchor", "end")
 .text(d => d); 
+
+// Added hover effect
+bar.on("mouseover", function() {
+    d3.select(this).select("rect").attr("class", "bar hover");
+}).on("mouseout", function() {
+    d3.select(this).select("rect").attr("class", "bar");
+});
