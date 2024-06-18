@@ -1,1 +1,1 @@
-# Project-11
+Project 11 is about creating an HTML with a dynamic bar chart by using a D3.js file. The file will represent a dataset through proportioned bar lengths. Each one of the bars will display a correspoding value and include different interactive elements.
