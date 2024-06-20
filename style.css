@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#chart {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.bar {
+    fill: steelblue;
+    transition: fill 0.3s;
+}
+
+.bar:hover {
+    fill: orange;
+}
+
+.label {
+    fill: white;
+    font-size: 12px;
+    text-anchor: end;}
